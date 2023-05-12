@@ -1,0 +1,3745 @@
+{
+	"info": {
+		"_postman_id": "a1b6e6cd-6939-45f3-b4be-4d033fd54748",
+		"name": "Pristine Revamp Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24426136",
+		"_collection_link": "https://grey-trinity-512121.postman.co/workspace/Pristine~2cff878e-cae0-4841-b5d7-a23bbd507521/collection/24426136-a1b6e6cd-6939-45f3-b4be-4d033fd54748?action=share&creator=24426136&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "Article",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://157.230.38.90:8002/api/article?all=true",
+									"protocol": "http",
+									"host": [
+										"157",
+										"230",
+										"38",
+										"90"
+									],
+									"port": "8002",
+									"path": [
+										"api",
+										"article"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true"
+										},
+										{
+											"key": "related",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "50",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/article/Bret Schuster",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"article",
+										"Bret Schuster"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Faq",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/faq",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"faq"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSegment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/faq-segment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"faq-segment"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Contact",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "babek",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "galeant12@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "083812144156",
+											"type": "text"
+										},
+										{
+											"key": "lang_preference",
+											"value": "id",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "jalan jalan",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "-6.2412134",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "106.6258364",
+											"type": "text"
+										},
+										{
+											"key": "province_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "101010",
+											"type": "text"
+										},
+										{
+											"key": "exp_date",
+											"value": "2023-10-10",
+											"type": "text"
+										},
+										{
+											"key": "production_code",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "order_type",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "order_number",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "partner_type",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "distribution_sub_district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "distribution_postal",
+											"value": "987654",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "notes",
+											"value": "qwdqwdqwdqq",
+											"type": "text"
+										},
+										{
+											"key": "order_number",
+											"value": "qwdqwdqwdq",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/contact",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"contact"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/product?all=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Promo",
+					"item": [
+						{
+							"name": "Get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/promo?all=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"promo"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Detail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/promo/11",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"promo",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "promo_code",
+											"value": "fJ8N4",
+											"type": "text"
+										},
+										{
+											"key": "galon",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "refill_galon",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "lima_belas",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "enam_ratus",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "empat_ratus",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/promo/validate",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"promo",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Location",
+					"item": [
+						{
+							"name": "getProvince",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/location/province",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"location",
+										"province"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/location/city?province_id=6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"location",
+										"city"
+									],
+									"query": [
+										{
+											"key": "province_id",
+											"value": "6"
+										},
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDistrict(Kecamatan)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/location/district",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"location",
+										"district"
+									],
+									"query": [
+										{
+											"key": "province_id",
+											"value": "6",
+											"disabled": true
+										},
+										{
+											"key": "city_id",
+											"value": "38",
+											"disabled": true
+										},
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDistrict(Kelurahan)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/location/sub-district?district_id=464&all=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"location",
+										"sub-district"
+									],
+									"query": [
+										{
+											"key": "province_id",
+											"value": "6",
+											"disabled": true
+										},
+										{
+											"key": "city_id",
+											"value": "38",
+											"disabled": true
+										},
+										{
+											"key": "district_id",
+											"value": "464"
+										},
+										{
+											"key": "all",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.globals.get(\"variable_key\");\r",
+											"\r",
+											"pm.collectionVariables.set(\"admin_token\", jsonData[\"data\"][\"token\"]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kadal@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "083812144156",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "momo@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "momo",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "momo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/update-profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"update-profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/admin/logout",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Promo",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/promo",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"promo"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/promo/1/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"promo",
+										"1",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "ini title",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2023-10-10",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2023-12-12",
+											"type": "text"
+										},
+										{
+											"key": "voucher_code",
+											"value": "abcde",
+											"type": "text"
+										},
+										{
+											"key": "terms_cond",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "galon",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "refill_galon",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "lima_belas_lt",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "enam_ratus_ml",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "empat_ratus_ml",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "draft",
+											"type": "text"
+										},
+										{
+											"key": "promo_thumbnail",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/penfb.png"
+										},
+										{
+											"key": "promo_image",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/perfb.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/promo/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"promo",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "ini title update",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2023-10-10",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2023-12-12",
+											"type": "text"
+										},
+										{
+											"key": "voucher_code",
+											"value": "abcde",
+											"type": "text"
+										},
+										{
+											"key": "terms_cond",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "galon",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "refill_galon",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "lima_belas_lt",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "enam_ratus_ml",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "empat_ratus_ml",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "draft",
+											"type": "text"
+										},
+										{
+											"key": "promo_thumbnail",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/usr.png"
+										},
+										{
+											"key": "promo_image",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/bebek.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/promo/1/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"promo",
+										"1",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[id]",
+											"value": "ayam",
+											"type": "text"
+										},
+										{
+											"key": "title[en]",
+											"value": "chiken",
+											"type": "text"
+										},
+										{
+											"key": "title[jp]",
+											"value": "チキン",
+											"type": "text"
+										},
+										{
+											"key": "content[id]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "content[en]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "content[jp]",
+											"value": "<h1>Pristiners の皆さんは、pH の高い飲料水について疑問に思うことがよくあります。 pHの高い飲料水は、普通のミネラルウォーターとは違うと思って飲むのをためらう人が多いです。実際、高 pH の飲料水は実際には他のボトル入りの飲料水と同じですが、ミネラルウォーターの pH は 7 で、プリスティンの pH は 8.6+ で、pH が 8+ と高く、水の分子が小さい点が異なります。そのため、通常のミネラルウォーターと同様に、高 pH の飲料水も安全に摂取できます。以下は、事実を知る必要がある高 pH の飲料水に関する神話です。",
+											"type": "text"
+										},
+										{
+											"key": "温めたり冷やしたりしてはいけない",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "多くの人は、pH の高い飲料水を熱湯または冷水で飲むことができないかどうか、いまだに確信が持てません。実際、高 pH 飲料水は両方の温度で消費できます。加熱すると、実際にpHとORP（酸化還元電位）または抗酸化物質の含有量に変化がありますが、それほど重要ではなく、高pHの飲料水の利点を変えないため、熱くなっても安全に消費できます.",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "一方、冷却すると酸化防止剤含有量（ORP）のみが変化し、pH値は変化しません。ただし、冷却/加熱時の数値の変化は、まだ妥当な範囲内です。</h1>",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "published_at",
+											"value": "2022-11-11",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "ini meta title",
+											"type": "text"
+										},
+										{
+											"key": "meta_keyword[]",
+											"value": "ini meta title",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "ini meta desc",
+											"type": "text"
+										},
+										{
+											"key": "slug[id]",
+											"value": "pinguin",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "banner",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/product/4/change-status",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product",
+										"4",
+										"change-status"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/promo/4/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"promo",
+										"4",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "search",
+											"value": "",
+											"description": "customer name | phone | email | province_name | city name | district name | subdistrict name | address | ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/order",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"order"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/order/8/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"order",
+										"8",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/user",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/user/9/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"9",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "bebek",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "mail@mail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "08383121441151",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/user/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "cicak24",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "maile@madil.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "08331421441151",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/user/9/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"9",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/user/9/change-status",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"9",
+										"change-status"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/user/9/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"9",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Article",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/article?all=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"article"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "all",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/article/3/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"article",
+										"3",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[id]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "title[en]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "title[jp]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "content[id]",
+											"value": "<p>test</p>",
+											"type": "text"
+										},
+										{
+											"key": "content[en]",
+											"value": "<p>test</p>",
+											"type": "text"
+										},
+										{
+											"key": "content[jp]",
+											"value": "<p>test</p>",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "published_at",
+											"value": "2023-02-27",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "ini test",
+											"type": "text"
+										},
+										{
+											"key": "meta_keyword[]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "banner",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/penfb.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/article/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"article",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[id]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "title[en]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "title[jp]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "content[id]",
+											"value": "<p>test</p>",
+											"type": "text"
+										},
+										{
+											"key": "content[en]",
+											"value": "<p>test</p>",
+											"type": "text"
+										},
+										{
+											"key": "content[jp]",
+											"value": "<p>test</p>",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "published_at",
+											"value": "2023-02-27",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "ini test",
+											"type": "text"
+										},
+										{
+											"key": "meta_keyword[]",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "banner",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/template.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/article/11/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"article",
+										"11",
+										"update"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[id]",
+											"value": "ayam",
+											"type": "text"
+										},
+										{
+											"key": "title[en]",
+											"value": "chiken",
+											"type": "text"
+										},
+										{
+											"key": "title[jp]",
+											"value": "チキン",
+											"type": "text"
+										},
+										{
+											"key": "content[id]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "content[en]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "content[jp]",
+											"value": "<h1>Pristiners の皆さんは、pH の高い飲料水について疑問に思うことがよくあります。 pHの高い飲料水は、普通のミネラルウォーターとは違うと思って飲むのをためらう人が多いです。実際、高 pH の飲料水は実際には他のボトル入りの飲料水と同じですが、ミネラルウォーターの pH は 7 で、プリスティンの pH は 8.6+ で、pH が 8+ と高く、水の分子が小さい点が異なります。そのため、通常のミネラルウォーターと同様に、高 pH の飲料水も安全に摂取できます。以下は、事実を知る必要がある高 pH の飲料水に関する神話です。",
+											"type": "text"
+										},
+										{
+											"key": "温めたり冷やしたりしてはいけない",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "多くの人は、pH の高い飲料水を熱湯または冷水で飲むことができないかどうか、いまだに確信が持てません。実際、高 pH 飲料水は両方の温度で消費できます。加熱すると、実際にpHとORP（酸化還元電位）または抗酸化物質の含有量に変化がありますが、それほど重要ではなく、高pHの飲料水の利点を変えないため、熱くなっても安全に消費できます.",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "一方、冷却すると酸化防止剤含有量（ORP）のみが変化し、pH値は変化しません。ただし、冷却/加熱時の数値の変化は、まだ妥当な範囲内です。</h1>",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "published_at",
+											"value": "2022-11-11",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "ini meta title",
+											"type": "text"
+										},
+										{
+											"key": "meta_keyword[]",
+											"value": "ini meta title",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "ini meta desc",
+											"type": "text"
+										},
+										{
+											"key": "slug[id]",
+											"value": "pinguin",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "banner",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/article/1/change-status",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"article",
+										"1",
+										"change-status"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/article/4/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"article",
+										"4",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/product",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/product/4/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product",
+										"4",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "price",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "name[id]",
+											"value": "bebek",
+											"type": "text"
+										},
+										{
+											"key": "name[en]",
+											"value": "duck",
+											"type": "text"
+										},
+										{
+											"key": "name[jp]",
+											"value": "アヒル",
+											"type": "text"
+										},
+										{
+											"key": "description[id]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "description[en]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "description[jp]",
+											"value": "<h1>Pristiners の皆さんは、pH の高い飲料水について疑問に思うことがよくあります。 pHの高い飲料水は、普通のミネラルウォーターとは違うと思って飲むのをためらう人が多いです。実際、高 pH の飲料水は実際には他のボトル入りの飲料水と同じですが、ミネラルウォーターの pH は 7 で、プリスティンの pH は 8.6+ で、pH が 8+ と高く、水の分子が小さい点が異なります。そのため、通常のミネラルウォーターと同様に、高 pH の飲料水も安全に摂取できます。以下は、事実を知る必要がある高 pH の飲料水に関する神話です。",
+											"type": "text"
+										},
+										{
+											"key": "温めたり冷やしたりしてはいけない",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "多くの人は、pH の高い飲料水を熱湯または冷水で飲むことができないかどうか、いまだに確信が持てません。実際、高 pH 飲料水は両方の温度で消費できます。加熱すると、実際にpHとORP（酸化還元電位）または抗酸化物質の含有量に変化がありますが、それほど重要ではなく、高pHの飲料水の利点を変えないため、熱くなっても安全に消費できます.",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "一方、冷却すると酸化防止剤含有量（ORP）のみが変化し、pH値は変化しません。ただし、冷却/加熱時の数値の変化は、まだ妥当な範囲内です。</h1>",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/usr.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/product/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "price",
+											"value": "70000",
+											"type": "text"
+										},
+										{
+											"key": "name[id]",
+											"value": "cicak",
+											"type": "text"
+										},
+										{
+											"key": "name[en]",
+											"value": "lizard",
+											"type": "text"
+										},
+										{
+											"key": "name[jp]",
+											"value": "アヒル1",
+											"type": "text"
+										},
+										{
+											"key": "description[id]",
+											"value": "<h1>ini kontefw2n</h1>",
+											"type": "text"
+										},
+										{
+											"key": "description[en]",
+											"value": "<h1>infwfwi kont2en</h1>",
+											"type": "text"
+										},
+										{
+											"key": "description[jp]",
+											"value": "<h1>Priffwstin4ers の皆さんは、pH の高い飲料水について疑問に思うことがよくあります。 pHの高い飲料水は、普通のミネラルウォーターとは違うと思って飲むのをためらう人が多いです。実際、高 pH の飲料水は実際には他のボトル入りの飲料水と同じですが、ミネラルウォーターの pH は 7 で、プリスティンの pH は 8.6+ で、pH が 8+ と高く、水の分子が小さい点が異なります。そのため、通常のミネラルウォーターと同様に、高 pH の飲料水も安全に摂取できます。以下は、事実を知る必要がある高 pH の飲料水に関する神話です。",
+											"type": "text"
+										},
+										{
+											"key": "温めたり冷やしたりしてはいけない",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "多くの人は、pH の高い飲料水を熱湯または冷水で飲むことができないかどうか、いまだに確信が持てません。実際、高 pH 飲料水は両方の温度で消費できます。加熱すると、実際にpHとORP（酸化還元電位）または抗酸化物質の含有量に変化がありますが、それほど重要ではなく、高pHの飲料水の利点を変えないため、熱くなっても安全に消費できます.",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "一方、冷却すると酸化防止剤含有量（ORP）のみが変化し、pH値は変化しません。ただし、冷却/加熱時の数値の変化は、まだ妥当な範囲内です。</h1>",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/usr.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/product/1/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product",
+										"1",
+										"update"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title[id]",
+											"value": "ayam",
+											"type": "text"
+										},
+										{
+											"key": "title[en]",
+											"value": "chiken",
+											"type": "text"
+										},
+										{
+											"key": "title[jp]",
+											"value": "チキン",
+											"type": "text"
+										},
+										{
+											"key": "content[id]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "content[en]",
+											"value": "<h1>ini konten</h1>",
+											"type": "text"
+										},
+										{
+											"key": "content[jp]",
+											"value": "<h1>Pristiners の皆さんは、pH の高い飲料水について疑問に思うことがよくあります。 pHの高い飲料水は、普通のミネラルウォーターとは違うと思って飲むのをためらう人が多いです。実際、高 pH の飲料水は実際には他のボトル入りの飲料水と同じですが、ミネラルウォーターの pH は 7 で、プリスティンの pH は 8.6+ で、pH が 8+ と高く、水の分子が小さい点が異なります。そのため、通常のミネラルウォーターと同様に、高 pH の飲料水も安全に摂取できます。以下は、事実を知る必要がある高 pH の飲料水に関する神話です。",
+											"type": "text"
+										},
+										{
+											"key": "温めたり冷やしたりしてはいけない",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "多くの人は、pH の高い飲料水を熱湯または冷水で飲むことができないかどうか、いまだに確信が持てません。実際、高 pH 飲料水は両方の温度で消費できます。加熱すると、実際にpHとORP（酸化還元電位）または抗酸化物質の含有量に変化がありますが、それほど重要ではなく、高pHの飲料水の利点を変えないため、熱くなっても安全に消費できます.",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "一方、冷却すると酸化防止剤含有量（ORP）のみが変化し、pH値は変化しません。ただし、冷却/加熱時の数値の変化は、まだ妥当な範囲内です。</h1>",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "published_at",
+											"value": "2022-11-11",
+											"type": "text"
+										},
+										{
+											"key": "meta_title",
+											"value": "ini meta title",
+											"type": "text"
+										},
+										{
+											"key": "meta_keyword[]",
+											"value": "ini meta title",
+											"type": "text"
+										},
+										{
+											"key": "meta_description",
+											"value": "ini meta desc",
+											"type": "text"
+										},
+										{
+											"key": "slug[id]",
+											"value": "pinguin",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "banner",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/product/4/change-status",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product",
+										"4",
+										"change-status"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/product/4/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"product",
+										"4",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Faq",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/faq?all=true&segment_id=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"faq"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true"
+										},
+										{
+											"key": "segment_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "segment_id",
+											"value": "1",
+											"description": "1: TentangProduct, 2:TentangPh, 3:TekhnologiPristine",
+											"type": "text"
+										},
+										{
+											"key": "question[id]",
+											"value": "kadal id",
+											"type": "text"
+										},
+										{
+											"key": "answer[id]",
+											"value": "ini jawaban kadal id",
+											"type": "text"
+										},
+										{
+											"key": "question[en]",
+											"value": "kadal en",
+											"type": "text"
+										},
+										{
+											"key": "answer[en]",
+											"value": "ini jawaban kadal en",
+											"type": "text"
+										},
+										{
+											"key": "question[jp]",
+											"value": "kadal jp",
+											"type": "text"
+										},
+										{
+											"key": "answer[jp]",
+											"value": "ini jawaban kadal jp",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/faq/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"faq",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "segment_id",
+											"value": "2",
+											"description": "1: TentangProduct, 2:TentangPh, 3:TekhnologiPristine",
+											"type": "text"
+										},
+										{
+											"key": "question[id]",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "answer[id]",
+											"value": "ini jawaban kadal",
+											"type": "text"
+										},
+										{
+											"key": "question[en]",
+											"value": "lizard",
+											"type": "text"
+										},
+										{
+											"key": "answer[en]",
+											"value": "this is lizard",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/faq/1/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"faq",
+										"1",
+										"update"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changeStatus",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "segment_id",
+											"value": "2",
+											"description": "1: TentangProduct, 2:TentangPh, 3:TekhnologiPristine",
+											"type": "text"
+										},
+										{
+											"key": "question[id]",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "answer[id]",
+											"value": "ini jawaban kadal",
+											"type": "text"
+										},
+										{
+											"key": "question[en]",
+											"value": "lizard",
+											"type": "text"
+										},
+										{
+											"key": "answer[en]",
+											"value": "this is lizard",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/admin/faq/1/change-status",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"faq",
+										"1",
+										"change-status"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/faq/1/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"faq",
+										"1",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Customer",
+					"item": [
+						{
+							"name": "getList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/customer",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDetail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/customer/2/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"customer",
+										"2",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Contact",
+					"item": [
+						{
+							"name": "getList",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/admin/contact",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"admin",
+										"contact"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{admin_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "083812144156",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "galeant123@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "province_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "jkadalqwdqw aja",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "15810",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "ini bisa di kosongin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verification",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kadal@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/verification/:verif-token",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"verification",
+										":verif-token"
+									],
+									"variable": [
+										{
+											"key": "verif-token",
+											"value": "iniveriftoken"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"pm.globals.get(\"variable_key\");\r",
+											"\r",
+											"pm.collectionVariables.set(\"customer_token\", jsonData[\"data\"][\"token\"]);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "bebek@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "bebek",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kadal@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update profile",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "bebek",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "083812144156",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "bebek@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "bebek",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "bebek",
+											"type": "text"
+										},
+										{
+											"key": "province_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "jkadalqwdqw aja",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "15810",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "ini bisa di kosongin",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/C:/Users/ilham/Downloads/bebek.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/update-profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"update-profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Social Login Google",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kadal@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/social-login/google",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"social-login",
+										"google"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Social Login Facebook",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "kadal",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kadal@mail.como",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "customer",
+											"type": "text"
+										},
+										{
+											"key": "confirm_password",
+											"value": "customer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/social-login/facebook",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"social-login",
+										"facebook"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot Password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "galeant12@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/forgot-password",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"forgot-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/customer/logout",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customer/address",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"address"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customer/address/1/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"address",
+										"1",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "label",
+											"value": "ini label",
+											"type": "text"
+										},
+										{
+											"key": "contact_name",
+											"value": "cp name",
+											"type": "text"
+										},
+										{
+											"key": "contact_phone",
+											"value": "cp phone",
+											"type": "text"
+										},
+										{
+											"key": "province_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sub_district_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "jalan aja",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "15810",
+											"type": "text"
+										},
+										{
+											"key": "is_main_address",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "ini bisa di kosongin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/address/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"address",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "label",
+											"value": "ini label edit",
+											"type": "text"
+										},
+										{
+											"key": "contact_name",
+											"value": "cp name edit",
+											"type": "text"
+										},
+										{
+											"key": "contact_phone",
+											"value": "cp phone edit",
+											"type": "text"
+										},
+										{
+											"key": "province_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "city_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "district_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "sub_district_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "lat",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "long",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "jalan aja edit",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "15811",
+											"type": "text"
+										},
+										{
+											"key": "is_main_address",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "notes",
+											"value": "ini bisa di kosongin edit",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/address/1/update",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"address",
+										"1",
+										"update"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customer/address/1/delete",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"address",
+										"1",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "getData",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "search",
+											"value": "",
+											"description": "customer name | phone | email | province_name | city name | district name | subdistrict name | address | ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/order",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"order"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/customer/address/1/detail",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"address",
+										"1",
+										"detail"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getData Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "search",
+											"value": "",
+											"description": "customer name | phone | email | province_name | city name | district name | subdistrict name | address | ",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/customer/order",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"order"
+									],
+									"query": [
+										{
+											"key": "all",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contact_name\": \"test_order\",\r\n    \"contact_email\": \"galeant12@gmail.com\",\r\n    \"contact_phone\": \"083812144156\",\r\n    \"lang_preference\": \"id\",\r\n    \"province_id\": 1,\r\n    \"city_id\": 1,\r\n    \"district_id\": 1,\r\n    \"sub_district_id\": 1,\r\n    \"address\": \"address\",\r\n    \"postal_code\": \"123\",\r\n    \"notes\": \"notes\",\r\n    \"promo_code\": \"promo\",\r\n    \"items\":[\r\n        {\r\n            \"id\":1,\r\n            \"qty\":1\r\n        },\r\n        {\r\n            \"id\":3,\r\n            \"qty\":1\r\n        },\r\n        {\r\n            \"id\":4,\r\n            \"qty\":1\r\n        },\r\n        {\r\n            \"id\":6,\r\n            \"qty\":1\r\n        },\r\n        {\r\n            \"id\":8,\r\n            \"qty\":0\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/order/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"order",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{customer_token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://api-pristine-revamp.local/\nhttp://157.230.38.90:8002",
+			"type": "string"
+		},
+		{
+			"key": "admin_toke",
+			"value": ""
+		},
+		{
+			"key": "agen_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "customer_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "admin_token",
+			"value": ""
+		}
+	]
+}
